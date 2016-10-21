@@ -8,7 +8,7 @@
 $link = mysqli_connect(
     "127.0.0.1", // host
     "root",      // username
-    "root",      // password
+    " ",      // password
     "guestbook"       // schema name
 );
 
@@ -101,11 +101,11 @@ if (!empty($errors)) {
         <p>Your entry has some errors:</p>
         <ul>
 <?php
-    foreach ($errors as $error) {
+    foreach ($errors as $error):
 ?>
             <li><?=$error?></li>
 <?php
-    } // foreach
+    endforeach; // foreach
 ?>
         </ul>
 <?php
